@@ -101,7 +101,7 @@ destinations:
 
 ### Switching LLM Providers
 
-Thanks to LiteLLM, changing providers is just a config edit:
+Any [LiteLLM-supported provider](https://docs.litellm.ai/docs/providers) works — just change the config:
 
 ```yaml
 # Anthropic
@@ -112,15 +112,20 @@ summarizer:
 # OpenAI
 summarizer:
   provider: openai
-  model: gpt-4o-mini
+  model: gpt-5-mini
 
-# Google Gemini (API key)
+# Google Gemini
 summarizer:
   provider: gemini
   model: gemini-3-flash-preview
+
+# Local (Ollama)
+summarizer:
+  provider: ollama
+  model: qwen3.5:27b
 ```
 
-Set the corresponding env var (`ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `GEMINI_API_KEY`).
+Set the corresponding env var (`ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `GEMINI_API_KEY`) or run locally with Ollama.
 
 ## Architecture
 
