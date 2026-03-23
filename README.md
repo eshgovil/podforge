@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="PodForge" width="200">
+</p>
+
 # PodForge
 
 An open-source agent that generates personalized daily podcasts from your chosen news sources. Pick your feeds, configure host personalities and voices, and get a multi-host audio podcast delivered wherever you want.
