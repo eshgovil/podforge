@@ -44,6 +44,9 @@ class JsonEpisodeStore:
             "status": episode.status.value,
             "summary": episode.summary,
             "audio_path": episode.audio_path,
+            "summarizer_model": episode.summarizer_model,
+            "script_model": episode.script_model,
+            "speech_provider": episode.speech_provider,
             "articles": [
                 {
                     "id": str(a.id),
@@ -103,6 +106,21 @@ class JsonEpisodeStore:
             status=EpisodeStatus(str(data["status"])),
             summary=str(data["summary"]) if data.get("summary") else None,
             audio_path=str(data["audio_path"]) if data.get("audio_path") else None,
+            summarizer_model=(
+                str(data["summarizer_model"])
+                if data.get("summarizer_model")
+                else None
+            ),
+            script_model=(
+                str(data["script_model"])
+                if data.get("script_model")
+                else None
+            ),
+            speech_provider=(
+                str(data["speech_provider"])
+                if data.get("speech_provider")
+                else None
+            ),
             articles=articles,
             script=script,
         )

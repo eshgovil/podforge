@@ -9,6 +9,7 @@ from personalized_podcast.domain.value_objects.source_config import (
     SourceConfig,
     SourceKind,
 )
+from personalized_podcast.domain.value_objects.speech_provider import SpeechProvider
 
 
 class SourceConfigModel(BaseModel):
@@ -30,10 +31,14 @@ class ProviderModel(BaseModel):
     model: str | None = None
 
 
+class SpeechProviderModel(BaseModel):
+    provider: SpeechProvider
+
+
 class ProvidersModel(BaseModel):
     summarizer: ProviderModel
     script_writer: ProviderModel
-    speech: ProviderModel
+    speech: SpeechProviderModel
 
 
 class DestinationModel(BaseModel):

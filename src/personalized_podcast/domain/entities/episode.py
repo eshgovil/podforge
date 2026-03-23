@@ -16,4 +16,8 @@ class Episode:
     summary: str | None = None
     audio_path: str | None = None
     status: EpisodeStatus = EpisodeStatus.CREATED
+    # Provider metadata for traceability
+    summarizer_model: str | None = None
+    script_model: str | None = None
+    speech_provider: str | None = None
     id: UUID = field(default_factory=uuid4)

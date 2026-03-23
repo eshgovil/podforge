@@ -14,12 +14,12 @@ sources:
 hosts:
   - name: "Alex"
     personality: "Curious tech enthusiast who asks good follow-up questions and gets excited about breakthrough ideas"
-    voice_id: "21m00Tcm4TlvDq8ikWAM"
-    voice_provider: "elevenlabs"
+    voice_id: "af_heart"
+    voice_provider: "kokoro"
   - name: "Sam"
     personality: "Dry humor, skeptical, always looks for the business angle and practical implications"
-    voice_id: "TxGEqnHWrfWFTfGW9XjX"
-    voice_provider: "elevenlabs"
+    voice_id: "am_michael"
+    voice_provider: "kokoro"
 
 providers:
   summarizer:
@@ -29,7 +29,7 @@ providers:
     provider: gemini
     model: gemini-3-pro-preview
   speech:
-    provider: elevenlabs
+    provider: kokoro
 
 destinations:
   - kind: file

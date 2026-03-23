@@ -30,6 +30,7 @@ class PipelineService:
         mixer: AudioMixer,
         episode_store: EpisodeStore,
         channels: Sequence[DeliveryChannel],
+        provider_meta: dict[str, str] | None = None,
     ) -> None:
         self._fetchers = fetchers
         self._summarizer = summarizer
@@ -38,6 +39,7 @@ class PipelineService:
         self._mixer = mixer
         self._episode_store = episode_store
         self._channels = channels
+        self._provider_meta = provider_meta or {}
 
     def run(
         self,
@@ -129,6 +131,7 @@ class PipelineService:
     def _summarize(self, episode: Episode) -> Episode:
         logger.info("Summarizing %d articles", len(episode.articles))
         episode.summary = self._summarizer.summarize(episode.articles)
+        episode.summarizer_model = self._provider_meta.get("summarizer_model")
         episode.status = EpisodeStatus.SUMMARIZED
         self._episode_store.save(episode)
         return episode
@@ -146,6 +149,7 @@ class PipelineService:
             hosts=podcast.hosts,
             target_length_minutes=podcast.target_length_minutes,
         )
+        episode.script_model = self._provider_meta.get("script_model")
         episode.status = EpisodeStatus.SCRIPTED
         self._episode_store.save(episode)
         logger.info("Generated %d script segments", len(episode.script))
@@ -167,6 +171,7 @@ class PipelineService:
 
         self._mixer.mix(audio_segments, output_path)
         episode.audio_path = output_path
+        episode.speech_provider = self._provider_meta.get("speech_provider")
         episode.status = EpisodeStatus.SYNTHESIZED
         self._episode_store.save(episode)
         logger.info("Audio saved to %s", output_path)
