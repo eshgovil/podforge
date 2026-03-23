@@ -1,0 +1,36 @@
+podcast:
+  name: "Morning Briefing"
+  schedule: "0 7 * * *"
+  target_length_minutes: 1
+
+sources:
+  - name: "Hacker News"
+    kind: rss
+    url: "https://hnrss.org/frontpage"
+  - name: "TechCrunch"
+    kind: rss
+    url: "https://techcrunch.com/feed/"
+
+hosts:
+  - name: "Alex"
+    personality: "Curious tech enthusiast who asks good follow-up questions and gets excited about breakthrough ideas"
+    voice_id: "21m00Tcm4TlvDq8ikWAM"
+    voice_provider: "elevenlabs"
+  - name: "Sam"
+    personality: "Dry humor, skeptical, always looks for the business angle and practical implications"
+    voice_id: "TxGEqnHWrfWFTfGW9XjX"
+    voice_provider: "elevenlabs"
+
+providers:
+  summarizer:
+    provider: gemini
+    model: gemini-3-flash-preview
+  script_writer:
+    provider: gemini
+    model: gemini-3-pro-preview
+  speech:
+    provider: elevenlabs
+
+destinations:
+  - kind: file
+    path: "./output"

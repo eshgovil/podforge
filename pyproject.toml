@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "personalized-podcast"
+version = "0.1.0"
+description = "An open-source agent that generates personalized daily podcasts"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+    "feedparser>=6.0",
+    "httpx>=0.27",
+    "litellm>=1.0",
+    "elevenlabs>=1.0",
+    "pydub>=0.25",
+    "pyyaml>=6.0",
+    "pydantic>=2.0",
+    "typer>=0.12",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "mypy>=1.5",
+    "ruff>=0.4",
+    "types-PyYAML>=6.0",
+]
+
+[project.scripts]
+podcast = "personalized_podcast.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/personalized_podcast"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "integration: tests that require external services and API keys",
+]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+mypy_path = "src"
+packages = ["personalized_podcast"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
