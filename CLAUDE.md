@@ -21,7 +21,7 @@ Each stage persists progress via `EpisodeStatus` for idempotent re-runs.
 - `uv run mypy src/` — type check
 - `uv run ruff check src/ tests/` — lint
 - `uv run ruff format src/ tests/` — format
-- `uv run podcast generate --config config.yaml` — generate an episode
+- `uv run podforge generate --config config.yaml` — generate an episode
 
 ## Conventions
 

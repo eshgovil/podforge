@@ -33,7 +33,7 @@ dev = [
 ]
 
 [project.scripts]
-podcast = "podforge.cli:app"
+podforge = "podforge.cli:app"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/podforge"]

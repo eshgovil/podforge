@@ -53,7 +53,7 @@ The LLM provider is configurable via `config.yaml` — any provider supported by
 ### Generate
 
 ```bash
-uv run podcast generate --config config.yaml
+uv run podforge generate --config config.yaml
 ```
 
 Add `-v` for verbose logging, or `--date 2026-03-22` for a specific date.
