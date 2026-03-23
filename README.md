@@ -151,10 +151,11 @@ uv run ruff format src/ tests/         # format
 
 ## Responsible Use
 
-This tool aggregates and summarizes content from third-party sources. Please respect the original creators:
+This tool generates podcasts for **personal consumption only**, not for commercial use or redistribution. Please respect the original creators:
 
+- **Personal use:** Generated episodes are meant for your own listening. Do not publish, monetize, or commercially distribute them.
 - **Paywalled content:** If a source requires a subscription, pay for it. Do not use this tool to circumvent paywalls.
-- **Attribution:** If you distribute generated episodes beyond personal use, you are responsible for crediting and citing the original sources.
+- **Attribution:** If you share episodes beyond personal use, you are responsible for crediting and citing the original sources.
 - **Terms of service:** Respect the terms of service of every source you configure. RSS feeds are generally intended for personal consumption.
 - **Copyright:** Generated episodes contain AI-summarized versions of original reporting. This is not a substitute for reading the source material — support the journalists and creators whose work makes this possible.
 
