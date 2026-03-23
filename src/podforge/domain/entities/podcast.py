@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from uuid import UUID, uuid5
 
-from personalized_podcast.domain.value_objects.host_config import HostConfig
-from personalized_podcast.domain.value_objects.source_config import SourceConfig
+from podforge.domain.value_objects.host_config import HostConfig
+from podforge.domain.value_objects.source_config import SourceConfig
 
 # Fixed namespace for deterministic podcast IDs based on name
 _PODCAST_NAMESPACE = UUID("a3bb189e-8bf9-3888-9912-ace4e6543002")

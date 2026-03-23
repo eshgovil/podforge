@@ -1,5 +1,5 @@
-from personalized_podcast.domain.entities.article import Article
-from personalized_podcast.domain.value_objects.source_config import SourceConfig
+from podforge.domain.entities.article import Article
+from podforge.domain.value_objects.source_config import SourceConfig
 
 
 class FakeContentFetcher:

@@ -2,9 +2,9 @@ from dataclasses import dataclass, field
 from datetime import date
 from uuid import UUID, uuid4
 
-from personalized_podcast.domain.entities.article import Article
-from personalized_podcast.domain.value_objects.episode_status import EpisodeStatus
-from personalized_podcast.domain.value_objects.script_segment import ScriptSegment
+from podforge.domain.entities.article import Article
+from podforge.domain.value_objects.episode_status import EpisodeStatus
+from podforge.domain.value_objects.script_segment import ScriptSegment
 
 
 @dataclass

@@ -1,13 +1,13 @@
-# Personalized Podcast Generator
+# PodForge
 
 ## Architecture
 
 Layered architecture with clean separation:
-- `src/personalized_podcast/domain/` — Pure dataclasses, no I/O
-- `src/personalized_podcast/application/` — Ports (Protocol interfaces) and PipelineService orchestration
-- `src/personalized_podcast/infrastructure/` — Concrete adapters (RSS, LiteLLM, ElevenLabs, etc.)
-- `src/personalized_podcast/cli.py` — Typer CLI entrypoint
-- `src/personalized_podcast/main.py` — Composition root (wires adapters)
+- `src/podforge/domain/` — Pure dataclasses, no I/O
+- `src/podforge/application/` — Ports (Protocol interfaces) and PipelineService orchestration
+- `src/podforge/infrastructure/` — Concrete adapters (RSS, LiteLLM, ElevenLabs, etc.)
+- `src/podforge/cli.py` — Typer CLI entrypoint
+- `src/podforge/main.py` — Composition root (wires adapters)
 
 ## Pipeline
 

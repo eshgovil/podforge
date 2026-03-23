@@ -2,7 +2,7 @@ import logging
 
 import litellm
 
-from personalized_podcast.domain.entities.article import Article
+from podforge.domain.entities.article import Article
 
 logger = logging.getLogger(__name__)
 

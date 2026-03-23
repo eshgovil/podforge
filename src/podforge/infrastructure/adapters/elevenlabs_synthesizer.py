@@ -2,8 +2,8 @@ import logging
 
 from elevenlabs import ElevenLabs
 
-from personalized_podcast.domain.value_objects.host_config import HostConfig
-from personalized_podcast.domain.value_objects.script_segment import ScriptSegment
+from podforge.domain.value_objects.host_config import HostConfig
+from podforge.domain.value_objects.script_segment import ScriptSegment
 
 logger = logging.getLogger(__name__)
 

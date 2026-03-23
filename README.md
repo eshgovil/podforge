@@ -1,4 +1,4 @@
-# Personalized Podcast Generator
+# PodForge
 
 An open-source agent that generates personalized daily podcasts from your chosen news sources. Pick your feeds, configure host personalities and voices, and get a multi-host audio podcast delivered wherever you want.
 
@@ -29,7 +29,7 @@ sudo apt install ffmpeg
 ### Install
 
 ```bash
-git clone <repo-url> && cd personalized_podcast
+git clone <repo-url> && cd podforge
 uv sync
 ```
 
@@ -130,7 +130,7 @@ Set the corresponding env var (`ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `GEMINI_AP
 ## Architecture
 
 ```
-src/personalized_podcast/
+src/podforge/
 ├── domain/           # Pure dataclasses, no I/O
 ├── application/      # Ports (Protocol interfaces) + PipelineService
 ├── infrastructure/   # Adapters (RSS, LiteLLM, ElevenLabs, pydub, JSON store)

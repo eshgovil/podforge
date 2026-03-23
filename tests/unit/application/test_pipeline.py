@@ -2,17 +2,17 @@ from datetime import date
 
 import pytest
 
-from personalized_podcast.application.services.pipeline import PipelineService
-from personalized_podcast.domain.entities.article import Article
-from personalized_podcast.domain.entities.episode import Episode
-from personalized_podcast.domain.entities.podcast import Podcast
-from personalized_podcast.domain.value_objects.episode_status import EpisodeStatus
-from personalized_podcast.domain.value_objects.host_config import HostConfig
-from personalized_podcast.domain.value_objects.script_segment import (
+from podforge.application.services.pipeline import PipelineService
+from podforge.domain.entities.article import Article
+from podforge.domain.entities.episode import Episode
+from podforge.domain.entities.podcast import Podcast
+from podforge.domain.value_objects.episode_status import EpisodeStatus
+from podforge.domain.value_objects.host_config import HostConfig
+from podforge.domain.value_objects.script_segment import (
     ScriptSegment,
     SegmentType,
 )
-from personalized_podcast.domain.value_objects.source_config import (
+from podforge.domain.value_objects.source_config import (
     SourceConfig,
     SourceKind,
 )

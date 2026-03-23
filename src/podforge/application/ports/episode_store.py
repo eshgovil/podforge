@@ -2,7 +2,7 @@ from datetime import date
 from typing import Protocol
 from uuid import UUID
 
-from personalized_podcast.domain.entities.episode import Episode
+from podforge.domain.entities.episode import Episode
 
 
 class EpisodeStore(Protocol):

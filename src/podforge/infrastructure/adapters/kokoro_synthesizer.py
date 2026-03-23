@@ -5,8 +5,8 @@ import numpy as np
 from kokoro import KPipeline  # type: ignore[import-untyped]
 from pydub import AudioSegment  # type: ignore[import-untyped]
 
-from personalized_podcast.domain.value_objects.host_config import HostConfig
-from personalized_podcast.domain.value_objects.script_segment import ScriptSegment
+from podforge.domain.value_objects.host_config import HostConfig
+from podforge.domain.value_objects.script_segment import ScriptSegment
 
 logger = logging.getLogger(__name__)
 

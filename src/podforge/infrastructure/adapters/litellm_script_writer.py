@@ -3,8 +3,8 @@ import logging
 
 import litellm
 
-from personalized_podcast.domain.value_objects.host_config import HostConfig
-from personalized_podcast.domain.value_objects.script_segment import (
+from podforge.domain.value_objects.host_config import HostConfig
+from podforge.domain.value_objects.script_segment import (
     ScriptSegment,
     SegmentType,
 )

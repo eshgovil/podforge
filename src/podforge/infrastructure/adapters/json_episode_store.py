@@ -4,10 +4,10 @@ from datetime import date, datetime
 from pathlib import Path
 from uuid import UUID
 
-from personalized_podcast.domain.entities.article import Article
-from personalized_podcast.domain.entities.episode import Episode
-from personalized_podcast.domain.value_objects.episode_status import EpisodeStatus
-from personalized_podcast.domain.value_objects.script_segment import (
+from podforge.domain.entities.article import Article
+from podforge.domain.entities.episode import Episode
+from podforge.domain.value_objects.episode_status import EpisodeStatus
+from podforge.domain.value_objects.script_segment import (
     ScriptSegment,
     SegmentType,
 )

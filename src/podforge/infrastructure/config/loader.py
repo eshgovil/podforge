@@ -3,13 +3,13 @@ from pathlib import Path
 import yaml
 from pydantic import BaseModel
 
-from personalized_podcast.domain.entities.podcast import Podcast
-from personalized_podcast.domain.value_objects.host_config import HostConfig
-from personalized_podcast.domain.value_objects.source_config import (
+from podforge.domain.entities.podcast import Podcast
+from podforge.domain.value_objects.host_config import HostConfig
+from podforge.domain.value_objects.source_config import (
     SourceConfig,
     SourceKind,
 )
-from personalized_podcast.domain.value_objects.speech_provider import SpeechProvider
+from podforge.domain.value_objects.speech_provider import SpeechProvider
 
 
 class SourceConfigModel(BaseModel):

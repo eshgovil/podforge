@@ -1,6 +1,6 @@
 from typing import Protocol
 
-from personalized_podcast.domain.entities.episode import Episode
+from podforge.domain.entities.episode import Episode
 
 
 class DeliveryChannel(Protocol):

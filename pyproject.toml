@@ -3,9 +3,9 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "personalized-podcast"
+name = "podforge"
 version = "0.1.0"
-description = "An open-source agent that generates personalized daily podcasts"
+description = "An open-source agent that generates personalized daily podcasts from your chosen news sources"
 readme = "README.md"
 requires-python = ">=3.12"
 license = "MIT"
@@ -33,10 +33,10 @@ dev = [
 ]
 
 [project.scripts]
-podcast = "personalized_podcast.cli:app"
+podcast = "podforge.cli:app"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/personalized_podcast"]
+packages = ["src/podforge"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -50,7 +50,7 @@ strict = true
 warn_return_any = true
 warn_unused_configs = true
 mypy_path = "src"
-packages = ["personalized_podcast"]
+packages = ["podforge"]
 
 [tool.ruff]
 target-version = "py312"

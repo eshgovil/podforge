@@ -1,33 +1,33 @@
 import os
 from datetime import date
 
-from personalized_podcast.application.ports.speech_synthesizer import (
+from podforge.application.ports.speech_synthesizer import (
     SpeechSynthesizer,
 )
-from personalized_podcast.application.services.pipeline import PipelineService
-from personalized_podcast.domain.entities.episode import Episode
-from personalized_podcast.domain.value_objects.episode_status import EpisodeStatus
-from personalized_podcast.domain.value_objects.source_config import SourceKind
-from personalized_podcast.domain.value_objects.speech_provider import SpeechProvider
-from personalized_podcast.infrastructure.adapters.elevenlabs_synthesizer import (
+from podforge.application.services.pipeline import PipelineService
+from podforge.domain.entities.episode import Episode
+from podforge.domain.value_objects.episode_status import EpisodeStatus
+from podforge.domain.value_objects.source_config import SourceKind
+from podforge.domain.value_objects.speech_provider import SpeechProvider
+from podforge.infrastructure.adapters.elevenlabs_synthesizer import (
     ElevenLabsSynthesizer,
 )
-from personalized_podcast.infrastructure.adapters.file_channel import FileChannel
-from personalized_podcast.infrastructure.adapters.json_episode_store import (
+from podforge.infrastructure.adapters.file_channel import FileChannel
+from podforge.infrastructure.adapters.json_episode_store import (
     JsonEpisodeStore,
 )
-from personalized_podcast.infrastructure.adapters.kokoro_synthesizer import (
+from podforge.infrastructure.adapters.kokoro_synthesizer import (
     KokoroSynthesizer,
 )
-from personalized_podcast.infrastructure.adapters.litellm_script_writer import (
+from podforge.infrastructure.adapters.litellm_script_writer import (
     LitellmScriptWriter,
 )
-from personalized_podcast.infrastructure.adapters.litellm_summarizer import (
+from podforge.infrastructure.adapters.litellm_summarizer import (
     LitellmSummarizer,
 )
-from personalized_podcast.infrastructure.adapters.pydub_mixer import PydubMixer
-from personalized_podcast.infrastructure.adapters.rss_fetcher import RssFetcher
-from personalized_podcast.infrastructure.config.loader import load_config
+from podforge.infrastructure.adapters.pydub_mixer import PydubMixer
+from podforge.infrastructure.adapters.rss_fetcher import RssFetcher
+from podforge.infrastructure.config.loader import load_config
 
 
 def build_and_run(

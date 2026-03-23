@@ -3,17 +3,17 @@ from collections.abc import Mapping, Sequence
 from datetime import date
 from pathlib import Path
 
-from personalized_podcast.application.ports.audio_mixer import AudioMixer
-from personalized_podcast.application.ports.content_fetcher import ContentFetcher
-from personalized_podcast.application.ports.delivery_channel import DeliveryChannel
-from personalized_podcast.application.ports.episode_store import EpisodeStore
-from personalized_podcast.application.ports.script_writer import ScriptWriter
-from personalized_podcast.application.ports.speech_synthesizer import SpeechSynthesizer
-from personalized_podcast.application.ports.summarizer import Summarizer
-from personalized_podcast.domain.entities.episode import Episode
-from personalized_podcast.domain.entities.podcast import Podcast
-from personalized_podcast.domain.value_objects.episode_status import EpisodeStatus
-from personalized_podcast.domain.value_objects.source_config import SourceKind
+from podforge.application.ports.audio_mixer import AudioMixer
+from podforge.application.ports.content_fetcher import ContentFetcher
+from podforge.application.ports.delivery_channel import DeliveryChannel
+from podforge.application.ports.episode_store import EpisodeStore
+from podforge.application.ports.script_writer import ScriptWriter
+from podforge.application.ports.speech_synthesizer import SpeechSynthesizer
+from podforge.application.ports.summarizer import Summarizer
+from podforge.domain.entities.episode import Episode
+from podforge.domain.entities.podcast import Podcast
+from podforge.domain.value_objects.episode_status import EpisodeStatus
+from podforge.domain.value_objects.source_config import SourceKind
 
 logger = logging.getLogger(__name__)
 

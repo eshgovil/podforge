@@ -2,7 +2,7 @@ import logging
 import shutil
 from pathlib import Path
 
-from personalized_podcast.domain.entities.episode import Episode
+from podforge.domain.entities.episode import Episode
 
 logger = logging.getLogger(__name__)
 

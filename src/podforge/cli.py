@@ -3,7 +3,7 @@ from datetime import date
 
 import typer
 
-app = typer.Typer(help="Personalized Podcast Generator")
+app = typer.Typer(help="PodForge — personalized podcast generator")
 
 
 STAGE_NAMES = [
@@ -35,10 +35,10 @@ def generate(
         format="%(asctime)s %(levelname)s %(name)s: %(message)s",
     )
 
-    from personalized_podcast.domain.value_objects.episode_status import (
+    from podforge.domain.value_objects.episode_status import (
         EpisodeStatus,
     )
-    from personalized_podcast.main import build_and_run
+    from podforge.main import build_and_run
 
     # Map CLI stage names to the status the episode should be rewound to
     stage_to_status: dict[str, EpisodeStatus] = {

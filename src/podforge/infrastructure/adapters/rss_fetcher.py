@@ -5,8 +5,8 @@ from datetime import datetime
 import feedparser  # type: ignore[import-untyped]
 import httpx
 
-from personalized_podcast.domain.entities.article import Article
-from personalized_podcast.domain.value_objects.source_config import SourceConfig
+from podforge.domain.entities.article import Article
+from podforge.domain.value_objects.source_config import SourceConfig
 
 logger = logging.getLogger(__name__)
 

@@ -1,7 +1,7 @@
 from datetime import date
 from uuid import UUID
 
-from personalized_podcast.domain.entities.episode import Episode
+from podforge.domain.entities.episode import Episode
 
 
 class FakeEpisodeStore:

@@ -1,4 +1,4 @@
-from personalized_podcast.domain.entities.article import Article
+from podforge.domain.entities.article import Article
 
 
 class FakeSummarizer:
