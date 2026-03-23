@@ -149,6 +149,15 @@ uv run ruff check src/ tests/          # lint
 uv run ruff format src/ tests/         # format
 ```
 
+## Responsible Use
+
+This tool aggregates and summarizes content from third-party sources. Please respect the original creators:
+
+- **Paywalled content:** If a source requires a subscription, pay for it. Do not use this tool to circumvent paywalls.
+- **Attribution:** If you distribute generated episodes beyond personal use, you are responsible for crediting and citing the original sources.
+- **Terms of service:** Respect the terms of service of every source you configure. RSS feeds are generally intended for personal consumption.
+- **Copyright:** Generated episodes contain AI-summarized versions of original reporting. This is not a substitute for reading the source material — support the journalists and creators whose work makes this possible.
+
 ## Cost Estimates
 
 Per 10-minute episode:
